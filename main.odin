@@ -5,7 +5,7 @@
   MIT License
   Copyright (c) 2014 Enrique García Cota
 
-  Modifications by Brandon Skewes, 2026:
+  Modifications by Ratludu, 2026:
   - Ported to Odin (raylib)
 
   Original License:
