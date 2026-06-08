@@ -7,6 +7,9 @@ This is a port only. All credit for the design and algorithm goes to the origina
 author. See the upstream project for the full documentation, tutorials, and
 background: <https://github.com/kikito/bump.lua>.
 
+This was originally ported to a 2D engine with Odin, but might be useful to others
+requiring this type of physics.
+
 > **Status:** not a complete port yet — the basics are covered (world creation,
 > add/remove/update, move/check/project, queries, and the slide/touch/cross
 > responses), but some of bump.lua's API is still missing. Contributions welcome!
