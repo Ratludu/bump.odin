@@ -1,0 +1,22 @@
+# Odin build artifacts
+*.bin
+*.exe
+*.o
+*.obj
+*.pdb
+*.lib
+*.a
+*.so
+*.dylib
+*.dll
+
+# Odin test/binary output (named after the package/dir)
+bump.bin
+bump.odin.bin
+
+# macOS
+.DS_Store
+
+# Editor / OS cruft
+*.swp
+*~
