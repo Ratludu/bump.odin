@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Cancel superseded runs on the same ref.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Odin
+        uses: laytan/setup-odin@v2
+        with:
+          release: latest
+
+      - name: Odin version
+        run: odin version
+
+      # Type-check and vet the library (no entry point: it is a package, not a program).
+      - name: Vet
+        run: odin check bump -no-entry-point -vet
+
+      # Run the package test suite. Odin's test runner also tracks allocations
+      # and fails on leaks.
+      - name: Test
+        run: odin test bump
