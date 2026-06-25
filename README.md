@@ -14,6 +14,10 @@ requiring this type of physics.
 > add/remove/update, move/check/project, queries, and the slide/touch/cross
 > responses), but some of bump.lua's API is still missing. Contributions welcome!
 
+## Demo
+
+![demo](demo/demo.gif)
+
 ## Usage
 
 ```odin
